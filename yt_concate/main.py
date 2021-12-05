@@ -6,7 +6,7 @@ from yt_concate.pipeline.steps.download_captions import DownloadCaptions
 from yt_concate.utils import Utils
 
 
-CHANNEL_ID = 'UCgc00bfF_PvO_2AvqJZHXFg'
+CHANNEL_ID = 'UCb4-om3UY151Hu1uCR8Q19Q'  # channel:MuscleWatching
 
 
 def main():
