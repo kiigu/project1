@@ -29,16 +29,4 @@ class DownloadCaptions(Step):
             text_file.close()
         end = time.time()
         print('Downloading captions took', end - start, 'seconds')
-        # try:
-        # source = YouTube('https://www.youtube.com/watch?v=2lAe1cqCOXo')
-        # en_caption = source.captions.get_by_language_code('en')
-        # en_caption_convert_to_srt = (en_caption.generate_srt_captions())
-            # except (KeyError, AttributeError):
-            #     print('Error when downloading caption for', url)
-            #     continue
 
-
-#            except exceptions.RegexMatchError:
-#                print("not all video captions are loaded.")
-#                continue
-#             break
