@@ -32,4 +32,4 @@ class YT:
         return os.path.join(CAPTIONS_DIR, self.id + '.txt')
 
     def get_video_filepath(self):
-        return os.path.join(CAPTIONS_DIR, self.id + '.mp4')
+        return os.path.join(VIDEOS_DIR, self.id + '.mp4')
