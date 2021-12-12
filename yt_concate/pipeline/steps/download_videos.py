@@ -11,7 +11,8 @@ class DownloadVideos(Step):
         for yt in yt_set:
             if utils.video_file_exists(yt):
                 print(f'Found existing video file for {yt.url}, skipped')
+                continue
             print('downloading', yt.url)
-            YouTube(yt.url).streams.first().download(output_path=VIDEOS_DIR, filename=yt.id + '.mp4')
+            YouTube(yt.url).streams.get_highest_resolution().download(output_path=VIDEOS_DIR, filename=yt.id + '.mp4')
 
         return data

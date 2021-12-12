@@ -6,18 +6,20 @@ from yt_concate.pipeline.steps.download_captions import DownloadCaptions
 from yt_concate.pipeline.steps.read_caption import ReadCaption
 from yt_concate.pipeline.steps.search import Search
 from yt_concate.pipeline.steps.download_videos import DownloadVideos
+from yt_concate.pipeline.steps.edit_videos import EditVideos
 from yt_concate.pipeline.steps.postflight import Postflight
 from yt_concate.utils import Utils
 
 
-CHANNEL_ID = 'UCb4-om3UY151Hu1uCR8Q19Q'  # channel:MuscleWatching
-KEY_WORD = 'core'
+CHANNEL_ID = 'UCgc00bfF_PvO_2AvqJZHXFg'
+KEY_WORD = 'you'
 
 
 def main():
     inputs = {
         'channel_id': CHANNEL_ID,
-        'key_word': KEY_WORD
+        'key_word': KEY_WORD,
+        'limit': 400
     }
 
     steps = [
@@ -28,6 +30,7 @@ def main():
         ReadCaption(),
         Search(),
         DownloadVideos(),
+        EditVideos(),
         Postflight()
     ]
 
