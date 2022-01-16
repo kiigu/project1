@@ -1,7 +1,10 @@
+import logging
+
 from yt_concate.pipeline.steps.step import Step
 
 
 class Preflight(Step):
     def process(self, data, inputs, utils):
-        print('in Preflight')
+        logger = logging.getLogger()
+        logger.info('in Preflight')
         utils.create_dirs()

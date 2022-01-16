@@ -1,9 +1,12 @@
+import logging
+
 from yt_concate.pipeline.steps.step import Step
-from yt_concate.pipeline.steps.step import StepException
 from yt_concate.model.found import Found
+
 
 class Search(Step):
     def process(self, data, inputs, utils):
+        logger = logging.getLogger()
         key_word = inputs['key_word']
 
         found = []
@@ -18,7 +21,6 @@ class Search(Step):
                     f = Found(yt, caption, time)
                     found.append(f)
 
-        print(len(found))
+        logger.info(f'Number of videos with keyword found in the channel: {len(found)}')
 
         return found
-

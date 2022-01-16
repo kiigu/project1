@@ -1,3 +1,5 @@
+import logging
+
 from moviepy.editor import VideoFileClip
 from moviepy.editor import concatenate_videoclips
 
